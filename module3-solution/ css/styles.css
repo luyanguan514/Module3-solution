@@ -46,6 +46,11 @@ h1.text-center {
   scroll-margin-top: 60px;
 }
 
+/* Per-section background colors — OUTSIDE the block above */
+.chicken-section { background-color: #c8e6c9; }  /* light green */
+.beef-section    { background-color: #ffcdd2; }  /* light red   */
+.sushi-section   { background-color: #bbdefb; }  /* light blue  */
+
 .menu-section h3 {
   margin-top: 0;
   font-weight: bold;
