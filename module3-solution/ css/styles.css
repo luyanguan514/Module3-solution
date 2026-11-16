@@ -1,57 +1,205 @@
-/* ---------- Page heading ---------- */
-h1.text-center {
-  margin-top: 30px;
-  margin-bottom: 30px;
+/* ---------- Global ---------- */
+body {
+    font-family: 'Lora', Georgia, serif;
+    color: #3a2f1b;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 1px;
 }
 
 /* ---------- Navbar ---------- */
-.navbar {
-  border-radius: 0;
-  margin-bottom: 0;
+.navbar-default {
+    background-color: #2d2a4a;
+    border-color: #1e1c33;
+    border-radius: 0;
+    margin-bottom: 0;
 }
 
-.navbar-brand {
-  font-size: 1.5em;
-  font-weight: bold;
+.navbar-default .navbar-brand {
+    color: #e8c96a;
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 2px;
 }
 
-/* Mobile dropdown menu: full width + distinct background */
-#mobile-menu {
-  background-color: #e7e7e7;
-  border-top: 1px solid #ddd;
-  margin-left: -15px;
-  margin-right: -15px;
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #fff3c4;
 }
 
-#mobile-menu .nav > li > a {
-  text-align: center;
-  font-size: 1.1em;
-  color: #555;
-  border-bottom: 1px solid #d7d7d7;
+.navbar-default .navbar-toggle {
+    border-color: #e8c96a;
 }
 
-#mobile-menu .nav > li > a:hover,
-#mobile-menu .nav > li > a:focus {
-  background-color: #d7d7d7;
-  color: #333;
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #3d3a5a;
 }
 
-/* ---------- The 3 menu sections ---------- */
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #e8c96a;
+}
+
+#collapsable-nav {
+    background-color: #2d2a4a;
+    border-top: 1px solid #1e1c33;
+}
+
+#nav-list {
+    margin: 0;
+}
+
+#nav-list li {
+    border-bottom: 1px solid #3d3a5a;
+}
+
+#nav-list li:last-child {
+    border-bottom: none;
+}
+
+#nav-list li a {
+    color: #e8c96a;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.15em;
+    padding: 15px;
+}
+
+#nav-list li a:hover,
+#nav-list li a:focus {
+    background-color: #3d3a5a;
+    color: #fff3c4;
+}
+
+/* ---------- Page Heading ---------- */
+#our-menu {
+    font-size: 3em;
+    font-weight: 700;
+    color: #2d2a4a;
+    margin: 40px 0 30px;
+    text-shadow: 1px 1px 0 #e8c96a;
+}
+
+/* ---------- Menu Sections ---------- */
 .menu-section {
-  height: 700px;
-  background-color: #e7e7e7;
-  padding: 20px;
-  margin-bottom: 15px;
-  overflow-y: auto;
-  scroll-margin-top: 60px;
+    padding: 10px 15px;
 }
 
-/* Per-section background colors — OUTSIDE the block above */
-.chicken-section { background-color: #c8e6c9; }  /* light green */
-.beef-section    { background-color: #ffcdd2; }  /* light red   */
-.sushi-section   { background-color: #bbdefb; }  /* light blue  */
+.section-inner {
+    padding: 25px 25px 15px;
+    border-radius: 8px;
+    border: 2px solid #d4c9a8;
+    min-height: 480px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(45, 42, 74, 0.15);
+    display: flex;
+    flex-direction: column;
+}
 
-.menu-section h3 {
-  margin-top: 0;
-  font-weight: bold;
+/* Region-themed backgrounds */
+.mondstadt-bg  { background: linear-gradient(180deg, #f6efe0 0%, #efe3c8 100%); }
+.liyue-bg      { background: linear-gradient(180deg, #f4e8dc 0%, #e8d3bf 100%); }
+.inazuma-bg    { background: linear-gradient(180deg, #eef0e6 0%, #dde3cf 100%); }
+.sumeru-bg     { background: linear-gradient(180deg, #eaf3e0 0%, #d4e6c2 100%); }
+.fontaine-bg   { background: linear-gradient(180deg, #e6eef6 0%, #cfe0ef 100%); }
+.natlan-bg     { background: linear-gradient(180deg, #fbe6d4 0%, #f3cdae 100%); }
+.nodkrai-bg    { background: linear-gradient(180deg, #e4e0f0 0%, #d0cbe6 100%); }
+.snezhnaya-bg  { background: linear-gradient(180deg, #eef4f8 0%, #d6e4ee 100%); }
+
+.section-inner h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2d2a4a;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e8c96a;
+    margin-bottom: 18px;
+}
+
+.region-desc {
+    font-style: italic;
+    font-size: 1.02em;
+    color: #5a4f3a;
+    margin-bottom: 15px;
+}
+
+.dish-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.dish-list li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #4a3f2a;
+    padding: 8px 0 8px 18px;
+    border-left: 3px solid #e8c96a;
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 0 4px 4px 0;
+}
+
+.dish-list li strong {
+    color: #2d2a4a;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.95em;
+}
+
+/* Back to Top link */
+.back-to-top {
+    display: block;
+    margin-top: auto;
+    padding: 10px 0;
+    background-color: #2d2a4a;
+    color: #e8c96a !important;
+    font-family: 'Cinzel', Georgia, serif;
+    font-weight: 600;
+    text-decoration: none !important;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background-color: #3d3a5a;
+    color: #fff3c4 !important;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #2d2a4a;
+    color: #e8c96a;
+    padding: 25px 15px;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 767px) {
+    #our-menu {
+        font-size: 2.2em;
+        margin: 25px 0 20px;
+    }
+    .navbar-brand {
+        font-size: 1.25em !important;
+    }
+    .section-inner {
+        min-height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #our-menu {
+        font-size: 2.6em;
+    }
 }
