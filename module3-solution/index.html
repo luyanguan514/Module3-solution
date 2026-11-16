@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food, LLC — Genshin Menu</title>
+
+  <!-- Bootstrap 3 CSS (CDN) -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (scrolls away, not fixed) ===== -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- Hamburger button: visible ONLY on mobile (xs) -->
+        <button type="button" class="navbar-toggle collapsed visible-xs"
+                data-toggle="collapse" data-target="#mobile-menu"
+                aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Company name, aligned left -->
+        <a class="navbar-brand" href="#">Food, LLC</a>
+      </div>
+
+      <!-- Dropdown menu: only collapses on mobile -->
+      <div class="collapse navbar-collapse" id="mobile-menu">
+        <ul class="nav navbar-nav visible-xs">
+          <li><a href="#">Chicken</a></li>
+          <li><a href="#">Beef</a></li>
+          <li><a href="#">Sushi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADING ===== -->
+  <h1 class="text-center">Our Menu</h1>
+
+  <!-- ===== TALL SECTION ===== -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 menu-section">
+        <h2 class="text-center">Chicken — Sweet Madame</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Paste a LOT of
+        text here so the section is tall enough to require scrolling — or just
+        rely on the CSS height below.)</p>
+        <p>Add more paragraphs of Genshin-flavored lore here…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery + Bootstrap JS (CDN, needed for the mobile toggle) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
 
