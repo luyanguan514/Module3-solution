@@ -1,10 +1,15 @@
+/* ============================================================
+   TEYVAT TASTE — GENSHIN IMPACT RESTAURANT
+   Module 3 Solution — Full Theme CSS
+   ============================================================ */
+
 /* ---------- Global ---------- */
 body {
     font-family: 'Lora', Georgia, serif;
     color: #3a2f1b;
     background-color: #fdf6e3; /* parchment */
     margin: 0;
-    padding-bottom: 0;
+    padding-bottom: 40px;      /* breathing room at page bottom (no footer) */
     scroll-behavior: smooth;   /* smooth scroll for Back to Top + menu links */
 }
 
@@ -199,27 +204,6 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top:focus {
     background-color: #3d3a5a;
     color: #fff3c4 !important;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-footer {
-    background-color: #2d2a4a;
-    color: #e8c96a;
-    padding: 25px 15px;
-    margin-top: 20px;
-    font-size: 0.95em;
-    border-top: 2px solid #e8c96a;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer em {
-    color: #fff3c4;
-    letter-spacing: 1px;
 }
 
 /* ============================================================
