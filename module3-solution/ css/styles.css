@@ -29,3 +29,22 @@
   color: #d4af37 !important;
 }
 
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #0f1620;
+  color: #e8dcc0;
+}
+
+.navbar-default {
+  background-color: #1a2433;
+  border-color: #d4af37;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #d4af37 !important;
+}
+
+h1, h2 {
+  color: #d4af37;
+}
