@@ -1,8 +1,8 @@
 /* --- GENSHIN GLOBAL THEME --- */
 body {
   font-family: 'Cinzel', serif;
-  background-color: #0f1620; /* Deep dark blue from your original code */
-  color: #e8dcc0;            /* Warm parchment text from your original code */
+  background-color: #0f1620 !important; /* Added !important to force dark mode */
+  color: #e8dcc0 !important;
 }
 
 /* Make the headings bright Genshin gold */
