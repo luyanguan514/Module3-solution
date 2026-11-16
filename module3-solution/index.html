@@ -1,103 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Food, LLC — Genshin Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teyvat Taste — Genshin Impact Restaurant</title>
 
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap 3 CSS (CDN) -->
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Your custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== NAVBAR (scrolls away, not fixed) ===== -->
-  <nav class="navbar navbar-default">
+    <!-- ============ NAVBAR ============ -->
+    <nav id="header-nav" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Mobile menu button (xs only) -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="#top">🍽️ Teyvat Taste</a>
+            </div>
+
+            <!-- Mobile-only dropdown menu -->
+            <div id="collapsable-nav" class="collapse navbar-collapse">
+                <ul id="nav-list" class="nav navbar-nav visible-xs">
+                    <li><a href="#mondstadt" class="text-center">🍽️ Mondstadt</a></li>
+                    <li><a href="#liyue" class="text-center">🥢 Liyue</a></li>
+                    <li><a href="#inazuma" class="text-center">🍣 Inazuma</a></li>
+                    <li><a href="#sumeru" class="text-center">🍛 Sumeru</a></li>
+                    <li><a href="#fontaine" class="text-center">🥐 Fontaine</a></li>
+                    <li><a href="#natlan" class="text-center">🔥 Natlan</a></li>
+                    <li><a href="#nodkrai" class="text-center">🌙 Nod-Krai</a></li>
+                    <li><a href="#snezhnaya" class="text-center">🍲 Snezhnaya</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HEADING ============ -->
+    <div id="top" class="container-fluid">
+        <h1 id="our-menu" class="text-center">Our Menu</h1>
+    </div>
+
+    <!-- ============ MAIN CONTENT GRID ============ -->
     <div class="container-fluid">
-      <div class="navbar-header">
-        <!-- Hamburger button: visible ONLY on mobile (xs) -->
-        <button type="button" class="navbar-toggle collapsed visible-xs"
-                data-toggle="collapse" data-target="#mobile-menu"
-                aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <div class="row">
 
-        <!-- Company name, aligned left -->
-        <a class="navbar-brand" href="#">Food, LLC</a>
-      </div>
+            <!-- MONSTADT -->
+            <div id="mondstadt" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner mondstadt-bg">
+                    <h3 class="text-center">🍽️ Mondstadt</h3>
+                    <p class="region-desc">
+                        Focuses on hearty grilled meats, potatoes, and simple pastries.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Grilled Meat Skewers / "Pile 'Em Up":</strong> Classic meat skewers and stacked meat dishes.</li>
+                        <li><strong>Fish Flavored Toast:</strong> Klee's specialty dish, toast topped with fish.</li>
+                        <li><strong>Mondstadt Grilled Fish:</strong> Diona's specialty version is called "Definitely Not an Appetizer".</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-      <!-- Dropdown menu: only collapses on mobile -->
-      <div class="collapse navbar-collapse" id="mobile-menu">
-        <ul class="nav navbar-nav visible-xs">
-          <li><a href="#chicken">Chicken</a></li>
-          <li><a href="#beef">Beef</a></li>
-          <li><a href="#sushi">Sushi</a></li>
-        </ul>
-      </div>
+            <!-- LIYUE -->
+            <div id="liyue" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner liyue-bg">
+                    <h3 class="text-center">🥢 Liyue</h3>
+                    <p class="region-desc">
+                        Pays great attention to broth and cooking techniques, with rich seafood and dim sum.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Crystal Shrimp:</strong> A classic dim sum from Liyue.</li>
+                        <li><strong>Squirrel Fish:</strong> A sweet and sour fish dish with elaborate preparation.</li>
+                        <li><strong>Universal Peace:</strong> A dish symbolizing good fortune, containing abundant ingredients.</li>
+                        <li><strong>Bamboo Shoot Soup:</strong> A fresh and delicious soup.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- INAZUMA -->
+            <div id="inazuma" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner inazuma-bg">
+                    <h3 class="text-center">🍣 Inazuma</h3>
+                    <p class="region-desc">
+                        Surrounded by the sea, it excels at seafood, noodles, and light dishes.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Sushi (Tuna/egg, etc.):</strong> Various types of sushi.</li>
+                        <li><strong>Imported Poultry:</strong> A dish with a unique name, said to increase crit rate.</li>
+                        <li><strong>Soba Noodles:</strong> A staple food that aids in stamina recovery.</li>
+                        <li><strong>Tricolor Dango:</strong> A traditional sweet dumpling snack.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- SUMERU -->
+            <div id="sumeru" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner sumeru-bg">
+                    <h3 class="text-center">🍛 Sumeru</h3>
+                    <p class="region-desc">
+                        Blends South Asian and Middle Eastern styles, abundant in spices, flatbreads, and stews.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Shawarma Wrap:</strong> A convenient meat wrap.</li>
+                        <li><strong>Panipuri:</strong> A crispy hollow fried snack.</li>
+                        <li><strong>Biryani:</strong> A rich spice-infused rice dish.</li>
+                        <li><strong>Padisarah Pudding:</strong> Nilou's specialty dessert.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- FONTAINE -->
+            <div id="fontaine" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner fontaine-bg">
+                    <h3 class="text-center">🥐 Fontaine</h3>
+                    <p class="region-desc">
+                        Refined and elegant, with a great emphasis on sauces and desserts.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Black Pudding:</strong> Although called "pudding," it is actually a blood sausage dish.</li>
+                        <li><strong>Fish and Chips:</strong> Classic fried fish and fries.</li>
+                        <li><strong>Macarons:</strong> Colorful and exquisite sweets.</li>
+                        <li><strong>Steak Tartare:</strong> Raw meat dish.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- NATLAN -->
+            <div id="natlan" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner natlan-bg">
+                    <h3 class="text-center">🔥 Natlan</h3>
+                    <p class="region-desc">
+                        Rustic and bold, primarily grilled meats and corn-based foods.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Tataco:</strong> A taco-style wrap.</li>
+                        <li><strong>Grainfruit Meat Soup:</strong> A hearty meat soup.</li>
+                        <li><strong>Flame Stew:</strong> A warming stewed meat dish.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- NOD-KRAI -->
+            <div id="nodkrai" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner nodkrai-bg">
+                    <h3 class="text-center">🌙 Nod-Krai</h3>
+                    <p class="region-desc">
+                        The food style leans toward Nordic or cold-region characteristics.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Nod-Krai Hot Dog:</strong> A local fast food.</li>
+                        <li><strong>Berry Pan-Fried Meat:</strong> A meat dish paired with berries.</li>
+                        <li><strong>Summer Hazel Cake:</strong> A local dessert.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- SNEZHNAYA -->
+            <div id="snezhnaya" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner snezhnaya-bg">
+                    <h3 class="text-center">🍲 Snezhnaya</h3>
+                    <p class="region-desc">
+                        Cold-region cuisine built to keep the bitter cold at bay.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Snezhnaya Shashliks:</strong> Large chunks of marinated meat grilled on iron skewers. A common sight wherever a fire can be lit, from courtyard gatherings to hunting trips.</li>
+                        <li><strong>Borscht:</strong> A vibrant red beet soup slow-simmered with vegetables and meat, often served with a spoonful of sour cream.</li>
+                        <li><strong>Stroganina:</strong> Thin, curling strips of frozen raw fish, typically served simply with coarse salt.</li>
+                        <li><strong>Podvorye Smoked Sausage &amp; Medovik:</strong> A smoked sausage dish and a classic honey cake, both available from the Podvorye Restaurant in Snezhnograd.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </nav>
 
-  <!-- ===== PAGE HEADING ===== -->
-  <h1 class="text-center">Our Menu</h1>
+    <!-- ============ FOOTER ============ -->
+    <footer class="container-fluid text-center">
+        <p>Teyvat Taste Restaurant &copy; 2024 — A Genshin Impact fan project</p>
+        <p><em>"Ad astra abyssosque!"</em></p>
+    </footer>
 
-  <!-- ===== 3-COLUMN MENU SECTION ===== -->
-  <div class="container-fluid">
-    <div class="row">
-
-      <!-- CHICKEN COLUMN -->
-      <div class="col-xs-12 col-sm-4">
-        <div class="menu-section chicken-section" id="chicken">
-          <h2 class="text-center">Chicken</h2>
-
-          <h3>Sweet Madame</h3>
-          <p>Named for a beloved recipe from Mondstadt, Sweet Madame is a 2-star healing dish in Genshin Impact, known for being the first recipe players obtain and for its extremely simple ingredients. Sweet Madame is created by cooking two fowls and two sweet flowers. The effect restores 22% of Max HP and an additional 1,200 HP to the selected character.</p>
-
-          <h3>Dinner of Judgment</h3>
-          <p>Named for Rosaria's specialty dish, Dinner of Judgment is a 2-star healing dish in Genshin Impact, obtained by cooking Sweet Madame with Rosaria as the active character. It is created by cooking two fowls and two sweet flowers. The effect restores 30% of Max HP and an additional 1,750 HP to the selected character.</p>
-        </div>
-      </div>
-
-      <!-- BEEF COLUMN -->
-      <div class="col-xs-12 col-sm-4">
-        <div class="menu-section beef-section" id="beef">
-          <h2 class="text-center">Beef</h2>
-
-          <h3>Steak</h3>
-          <p>Steak is a 1-star revival dish in Genshin Impact, known for being the first revival food players learn and for requiring only a single ingredient — two raw meats. It is a simple grilled steak that revives a fallen character and restores a small amount of HP.</p>
-
-          <h3>Outrider's Champion Steak</h3>
-          <p>Outrider's Champion Steak! is a 1-star revival dish in Genshin Impact, and it is Amber's specialty. It is made by cooking Steak while Amber is the active character. It revives a fallen character and restores 10% of Max HP, then restores 1,200 HP.</p>
-        </div>
-      </div>
-
-      <!-- SUSHI COLUMN -->
-      <div class="col-xs-12 col-sm-4">
-        <div class="menu-section sushi-section" id="sushi">
-          <h2 class="text-center">Sushi</h2>
-
-          <h3>Tuna Sushi</h3>
-          <p>Tuna Sushi is a 2-star healing dish in Genshin Impact, a traditional Inazuma recipe that can be purchased from Kiminami Anna in Inazuma City. Tuna Sushi is created by cooking three fish and three rice. The effect restores 22% of Max HP and an additional 1,200 HP to the selected character.</p>
-
-          <h3>Mega-Meaty Sushi</h3>
-          <p>Mega-Meaty Sushi is a 3-star healing dish in Genshin Impact, a collaboration recipe obtained from the Sushiro × Genshin Impact event. Mega-Meaty Sushi is created by cooking four raw meats, two radishes, and three flours. The effect restores 32% of Max HP and an additional 1,250 HP to the selected character.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- jQuery + Bootstrap JS (needed for the mobile toggle) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
