@@ -1,16 +1,36 @@
-/* Tall section — must be tall enough to force scrolling */
-.menu-section {
-  min-height: 1000px;   /* grow if content needs more room */
-  background-color: #2b3a4a;
-  color: #f0e6d2;
-  padding: 20px;
-  margin-top: 15px;
+/* --- GENSHIN GLOBAL THEME --- */
+body {
+  font-family: 'Cinzel', serif;
+  background-color: #0f1620; /* Deep dark blue from your original code */
+  color: #e8dcc0;            /* Warm parchment text from your original code */
 }
-/* Make the mobile dropdown span full width and stand out */
+
+/* Make the headings bright Genshin gold */
+h1, h2 {
+  color: #d4af37;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Adds a cool shadow for depth */
+}
+
+/* --- NAVBAR (Top Bar) --- */
+.navbar-default {
+  background-color: #1a2433;
+  border-color: #d4af37;
+  border-bottom: 2px solid #d4af37; /* Added gold line at the bottom */
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a,
+.navbar-brand {
+  color: #d4af37 !important;
+  font-weight: bold;
+}
+
+/* --- MOBILE DROPDOWN MENU --- */
 #mobile-menu {
-  background-color: #1a2433;   /* darker than page */
+  background-color: #1a2433; /* Darker than page */
   margin: 0;
   padding: 0;
+  border: 1px solid #d4af37; /* Added gold border around dropdown */
 }
 
 #mobile-menu .navbar-nav {
@@ -20,30 +40,28 @@
 #mobile-menu .navbar-nav > li > a {
   color: #f0e6d2;
   text-align: center;
+  font-size: 1.1em;
+  border-bottom: 1px solid #2b3a4a; /* Separates the menu items */
 }
 
-/* Optional: gold accent on the brand */
-.navbar-brand {
-  font-weight: bold;
+/* Added a hover effect so the items glow when tapped */
+#mobile-menu .navbar-nav > li > a:hover,
+#mobile-menu .navbar-nav > li > a:focus {
+  background-color: #2b3a4a;
   color: #d4af37 !important;
 }
 
-body {
-  font-family: 'Cinzel', serif;
-  background-color: #0f1620;
-  color: #e8dcc0;
-}
-
-.navbar-default {
-  background-color: #1a2433;
-  border-color: #d4af37;
-}
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-nav > li > a {
-  color: #d4af37 !important;
-}
-
-h1, h2 {
-  color: #d4af37;
+/* --- THE TALL MENU SECTION --- */
+.menu-section {
+  min-height: 1000px;      /* Grows if content needs more room */
+  background-color: #2b3a4a; /* Distinct box color */
+  color: #f0e6d2;
+  padding: 30px;           /* Increased padding slightly for a better look */
+  margin-top: 15px;
+  margin-bottom: 50px;     /* Space at the bottom of the page */
+  
+  /* Added subtle gold border and shadow to make it pop like a game UI */
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
