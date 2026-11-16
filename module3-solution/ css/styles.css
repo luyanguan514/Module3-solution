@@ -1,21 +1,25 @@
 /* --- GENSHIN GLOBAL THEME --- */
 body {
   font-family: 'Cinzel', serif;
-  background-color: #0f1620 !important; /* Added !important to force dark mode */
+  background-color: #0f1620 !important;
   color: #e8dcc0 !important;
 }
 
-/* Make the headings bright Genshin gold */
-h1, h2 {
+/* Make the page heading bright Genshin gold */
+h1 {
   color: #d4af37;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Adds a cool shadow for depth */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* --- NAVBAR (Top Bar) --- */
 .navbar-default {
   background-color: #1a2433;
   border-color: #d4af37;
-  border-bottom: 2px solid #d4af37; /* Added gold line at the bottom */
+  border-bottom: 2px solid #d4af37;
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
 .navbar-default .navbar-brand,
@@ -27,10 +31,10 @@ h1, h2 {
 
 /* --- MOBILE DROPDOWN MENU --- */
 #mobile-menu {
-  background-color: #1a2433; /* Darker than page */
+  background-color: #1a2433;
   margin: 0;
   padding: 0;
-  border: 1px solid #d4af37; /* Added gold border around dropdown */
+  border: 1px solid #d4af37;
 }
 
 #mobile-menu .navbar-nav {
@@ -41,27 +45,65 @@ h1, h2 {
   color: #f0e6d2;
   text-align: center;
   font-size: 1.1em;
-  border-bottom: 1px solid #2b3a4a; /* Separates the menu items */
+  border-bottom: 1px solid #2b3a4a;
 }
 
-/* Added a hover effect so the items glow when tapped */
 #mobile-menu .navbar-nav > li > a:hover,
 #mobile-menu .navbar-nav > li > a:focus {
   background-color: #2b3a4a;
   color: #d4af37 !important;
 }
 
-/* --- THE TALL MENU SECTION --- */
+/* --- MENU SECTIONS (3 columns on desktop, stacked on mobile) --- */
 .menu-section {
-  min-height: 1000px;      /* Grows if content needs more room */
-  background-color: #2b3a4a; /* Distinct box color */
-  color: #f0e6d2;
-  padding: 30px;           /* Increased padding slightly for a better look */
+  min-height: 1000px;          /* tall enough to force scrolling */
+  padding: 30px;
   margin-top: 15px;
-  margin-bottom: 50px;     /* Space at the bottom of the page */
-  
-  /* Added subtle gold border and shadow to make it pop like a game UI */
+  margin-bottom: 50px;
   border: 1px solid #d4af37;
   border-radius: 10px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #1a1a1a;              /* dark text so it reads on light backgrounds */
+}
+
+/* Each column's own background color */
+.chicken-section {
+  background-color: #c8e6c9;   /* light green */
+}
+
+.beef-section {
+  background-color: #ffcdd2;   /* light red */
+}
+
+.sushi-section {
+  background-color: #bbdefb;   /* light blue */
+}
+
+/* Headings inside sections */
+.menu-section h2 {
+  color: #1a2433;              /* dark navy for contrast on light bg */
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-shadow: none;
+}
+
+.menu-section h3 {
+  color: #3a3a3a;
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.menu-section p {
+  line-height: 1.6;
+  color: #2b2b2b;
+}
+
+/* Slight padding so columns don't touch on tablet/desktop */
+@media (min-width: 768px) {
+  .row > [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
