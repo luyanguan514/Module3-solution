@@ -1,302 +1,219 @@
-/* ============================================================
-   TEYVAT TASTE — GENSHIN IMPACT RESTAURANT
-   Module 3 Solution — Full Theme CSS
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teyvat Taste — Genshin Impact Restaurant</title>
 
-/* ---------- Global ---------- */
-body {
-    font-family: 'Lora', Georgia, serif;
-    color: #3a2f1b;
-    background-color: #fdf6e3; /* parchment */
-    margin: 0;
-    padding-bottom: 40px;      /* breathing room at page bottom (no footer) */
-    scroll-behavior: smooth;   /* smooth scroll for Back to Top + menu links */
-}
+    <!-- Bootstrap 3.3.7 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel', Georgia, serif;
-    letter-spacing: 1px;
-}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
-.navbar-default {
-    background-color: #2d2a4a;      /* deep abyss blue */
-    border-color: #1e1c33;
-    border-radius: 0;
-    margin-bottom: 0;
-    /* NOT fixed — scrolls away with the page (assignment requirement) */
-}
+    <!-- ============ NAVBAR ============ -->
+    <nav id="header-nav" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Mobile menu button (xs only) -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-.navbar-default .navbar-brand {
-    color: #e8c96a;                 /* gold */
-    font-family: 'Cinzel', Georgia, serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    text-shadow: 0 0 6px rgba(232, 201, 106, 0.35);
-}
+                <!-- Brand -->
+                <a class="navbar-brand" href="#top">🍽️ Teyvat Taste</a>
+            </div>
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #fff3c4;
-}
+            <!-- Mobile-only dropdown menu -->
+            <div id="collapsable-nav" class="collapse navbar-collapse">
+                <ul id="nav-list" class="nav navbar-nav visible-xs">
+                    <li><a href="#mondstadt" class="text-center">🍽️ Mondstadt</a></li>
+                    <li><a href="#liyue" class="text-center">🥢 Liyue</a></li>
+                    <li><a href="#inazuma" class="text-center">🍣 Inazuma</a></li>
+                    <li><a href="#sumeru" class="text-center">🍛 Sumeru</a></li>
+                    <li><a href="#fontaine" class="text-center">🥐 Fontaine</a></li>
+                    <li><a href="#natlan" class="text-center">🔥 Natlan</a></li>
+                    <li><a href="#nodkrai" class="text-center">🌙 Nod-Krai</a></li>
+                    <li><a href="#snezhnaya" class="text-center">🍲 Snezhnaya</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-/* Hamburger button (mobile only) */
-.navbar-default .navbar-toggle {
-    border-color: #e8c96a;
-    border-radius: 4px;
-}
+    <!-- ============ PAGE HEADING ============ -->
+    <div id="top" class="container-fluid">
+        <h1 id="our-menu" class="text-center">Our Menu</h1>
+        <p class="menu-subtitle text-center">
+            A journey through the eight culinary regions of Teyvat — from the hearty hearths of Mondstadt
+            to the frost-kissed kitchens of Snezhnaya.
+        </p>
+    </div>
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #3d3a5a;
-}
+    <!-- ============ MAIN CONTENT GRID ============ -->
+    <div class="container-fluid">
+        <div class="row">
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #e8c96a;
-}
+            <!-- MONSTADT (no Back to Top) -->
+            <div id="mondstadt" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner mondstadt-bg">
+                    <h3 class="text-center">🍽️ Mondstadt</h3>
+                    <p class="region-desc">
+                        The City of Freedom eats the way it lives — simply, generously, and always outdoors.
+                        Expect hearty grilled meats, golden potatoes, and pastries baked fresh for the
+                        Knights of Favonius. Every plate here tastes of wind, wheat, and good company.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Grilled Meat Skewers / Pile 'Em Up:</strong> Juicy chunks of grilled meat served on skewers or stacked together with potatoes and vegetables for a hearty meal.</li>
+                        <li><strong>Fish-Flavored Toast:</strong> Thick, golden toast topped with fresh fish and vegetables, making a simple but filling meal.</li>
+                        <li><strong>Mondstadt Grilled Fish:</strong> Fresh fish grilled over an open flame and seasoned with herbs and spices. Diona's specialty is called Definitely Not an Appetizer.</li>
+                    </ul>
+                </div>
+            </div>
 
-/* Mobile-only dropdown container */
-#collapsable-nav {
-    background-color: #2d2a4a;
-    border-top: 1px solid #1e1c33;
-    margin-top: 0;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25);
-}
+            <!-- LIYUE (first Back to Top) -->
+            <div id="liyue" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner liyue-bg">
+                    <h3 class="text-center">🥢 Liyue</h3>
+                    <p class="region-desc">
+                        In the Harbor of Commerce, food is craftsmanship. Liyue's kitchens prize slow broth,
+                        precise technique, and dishes rich with meaning — each one a small blessing of
+                        prosperity for the table.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Crystal Shrimp:</strong> Delicate steamed dumplings filled with shrimp and wrapped in translucent rice dough.</li>
+                        <li><strong>Squirrel Fish:</strong> A crispy, deep-fried fish shaped to resemble a squirrel, covered in a sweet and sour sauce.</li>
+                        <li><strong>Universal Peace:</strong> A colorful rice dish decorated with fruits and vegetables, symbolizing prosperity, happiness, and good fortune.</li>
+                        <li><strong>Bamboo Shoot Soup:</strong> A comforting soup made with fresh bamboo shoots and meat, offering a light yet flavorful taste.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-#nav-list {
-    margin: 0;
-}
+            <!-- INAZUMA -->
+            <div id="inazuma" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner inazuma-bg">
+                    <h3 class="text-center">🍣 Inazuma</h3>
+                    <p class="region-desc">
+                        An island nation fed by the sea. Inazuma's cuisine is light, clean, and quietly
+                        refined — fresh catches, delicate noodles, and sweets that turn a simple snack
+                        into a small ceremony.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Sushi (Tuna, Egg, etc.):</strong> Bite-sized portions of seasoned rice topped or filled with ingredients such as fresh fish and egg.</li>
+                        <li><strong>Imported Poultry:</strong> A beautifully prepared poultry dish featuring tender meat and rich seasoning, known for its elegant presentation.</li>
+                        <li><strong>Soba Noodles:</strong> Traditional Japanese-style buckwheat noodles served in a warm, savory broth.</li>
+                        <li><strong>Tricolor Dango:</strong> Three soft, chewy rice dumplings in pink, white, and green, served on a wooden skewer.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-#nav-list li {
-    border-bottom: 1px solid #3d3a5a;
-}
+            <!-- SUMERU -->
+            <div id="sumeru" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner sumeru-bg">
+                    <h3 class="text-center">🍛 Sumeru</h3>
+                    <p class="region-desc">
+                        Where the rainforest meets the desert, spice meets tradition. Sumeru's table draws
+                        from South Asian and Middle Eastern kitchens — fragrant rice, warm flatbreads,
+                        and stews that simmer for hours.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Shawarma Wrap:</strong> Thin slices of seasoned roasted meat wrapped in flatbread with vegetables and flavorful sauces.</li>
+                        <li><strong>Panipuri:</strong> Crispy, hollow fried dough balls filled with spicy, tangy water and flavorful fillings.</li>
+                        <li><strong>Biryani:</strong> Fragrant rice cooked with aromatic spices, vegetables, and tender meat for a rich and satisfying meal.</li>
+                        <li><strong>Padisarah Pudding:</strong> A delicate, creamy dessert with a smooth texture and floral-inspired presentation. It is Nilou's specialty dish.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-#nav-list li:last-child {
-    border-bottom: none;
-}
+            <!-- FONTAINE -->
+            <div id="fontaine" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner fontaine-bg">
+                    <h3 class="text-center">🥐 Fontaine</h3>
+                    <p class="region-desc">
+                        Refinement is the rule in Fontaine. Sauces are built with care, desserts are almost
+                        too beautiful to eat, and even a simple plate of fish carries a touch of quiet
+                        elegance worthy of the Court of Justice.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Black Pudding:</strong> A savory sausage made using blood and other ingredients, traditionally cooked until firm and rich in flavor.</li>
+                        <li><strong>Fish and Chips:</strong> Golden, crispy battered fish served with thick-cut fried potatoes, a classic comfort food.</li>
+                        <li><strong>Macarons:</strong> Colorful French-style almond meringue cookies with delicate crisp shells and sweet, creamy fillings.</li>
+                        <li><strong>Steak Tartare:</strong> Finely chopped raw beef seasoned with herbs and spices, usually served with a carefully arranged garnish.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-#nav-list li a {
-    color: #e8c96a;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 1.15em;
-    letter-spacing: 1px;
-    padding: 15px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
+            <!-- NATLAN -->
+            <div id="natlan" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner natlan-bg">
+                    <h3 class="text-center">🔥 Natlan</h3>
+                    <p class="region-desc">
+                        Bold, rustic, and cooked over open flame. Natlan's food is built for the field —
+                        grilled meats, corn-based staples, and stews that warm you from the inside out
+                        after a long day under the sun.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Tataco:</strong> A tortilla-style wrap filled with savory ingredients, offering a flavorful handheld meal.</li>
+                        <li><strong>Grainfruit Meat Soup:</strong> A hearty, warming soup combining tender meat with grainfruit and other ingredients in a flavorful broth.</li>
+                        <li><strong>Flame Stew:</strong> A rich, spicy meat stew slowly cooked with vegetables and seasonings, perfect for a filling meal.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-#nav-list li a:hover,
-#nav-list li a:focus {
-    background-color: #3d3a5a;
-    color: #fff3c4;
-    text-decoration: none;
-}
+            <!-- NOD-KRAI -->
+            <div id="nodkrai" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner nodkrai-bg">
+                    <h3 class="text-center">🌙 Nod-Krai</h3>
+                    <p class="region-desc">
+                        The youngest region on the map, and the coldest in spirit. Nod-Krai's kitchens lean
+                        Nordic — berries beside rich meat, simple street food, and desserts that taste like
+                        a quiet evening under a long moonlit sky.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Nod-Krai Hot Dog:</strong> A convenient street-food snack featuring a sausage served inside soft bread with flavorful toppings.</li>
+                        <li><strong>Berry Pan-Fried Meat:</strong> Tender meat cooked in a pan and paired with berries, creating a delicious balance of savory and sweet flavors.</li>
+                        <li><strong>Summer Hazel Cake:</strong> A sweet, delicate cake featuring hazelnut flavors, making it a lovely dessert or afternoon treat.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-/* ============================================================
-   PAGE HEADING + SUBTITLE
-   ============================================================ */
-#our-menu {
-    font-size: 3em;
-    font-weight: 700;
-    color: #2d2a4a;
-    margin: 40px 0 15px;
-    text-shadow: 1px 1px 0 #e8c96a;
-}
+            <!-- SNEZHNAYA -->
+            <div id="snezhnaya" class="col-xs-12 col-sm-6 col-md-4 menu-section">
+                <div class="section-inner snezhnaya-bg">
+                    <h3 class="text-center">🍲 Snezhnaya</h3>
+                    <p class="region-desc">
+                        Cold-region cuisine built to survive the winter — heavy, warming, and deeply
+                        comforting. Snezhnayan food is meant to be shared around a fire, wherever one
+                        can be lit.
+                    </p>
+                    <ul class="dish-list">
+                        <li><strong>Snezhnaya Shashliks:</strong> Large chunks of marinated meat threaded onto iron skewers and grilled over an open fire until smoky and tender.</li>
+                        <li><strong>Borscht:</strong> A traditional beetroot soup with a vibrant red color, slow-cooked with vegetables and meat and often topped with sour cream.</li>
+                        <li><strong>Stroganina:</strong> Thin, delicate slices of frozen raw fish served cold, usually with a little salt to highlight their natural flavor.</li>
+                        <li><strong>Podvorye Smoked Sausage &amp; Medovik:</strong> A combination of smoky, savory sausage and Medovik, a traditional Russian honey cake made with thin layers of honey-flavored pastry and creamy filling.</li>
+                    </ul>
+                    <a href="#top" class="back-to-top text-center">Back to Top</a>
+                </div>
+            </div>
 
-.menu-subtitle {
-    font-style: italic;
-    font-size: 1.1em;
-    color: #5a4f3a;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    padding: 0 15px;
-}
+        </div>
+    </div>
 
-/* ============================================================
-   MENU SECTION GRID
-   ============================================================ */
-.menu-section {
-    padding: 10px 15px;
-}
-
-.section-inner {
-    padding: 25px 25px 18px;
-    border-radius: 8px;
-    border: 2px solid #d4c9a8;
-    min-height: 500px;          /* keeps all 8 cards tall & consistent */
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(45, 42, 74, 0.15);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.section-inner:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(45, 42, 74, 0.25);
-}
-
-/* ---------- Region-themed backgrounds ---------- */
-.mondstadt-bg  { background: linear-gradient(180deg, #f6efe0 0%, #efe3c8 100%); } /* warm wheat */
-.liyue-bg      { background: linear-gradient(180deg, #f4e8dc 0%, #e8d3bf 100%); } /* clay & amber */
-.inazuma-bg    { background: linear-gradient(180deg, #eef0e6 0%, #dde3cf 100%); } /* sakura-sage */
-.sumeru-bg     { background: linear-gradient(180deg, #eaf3e0 0%, #d4e6c2 100%); } /* emerald forest */
-.fontaine-bg   { background: linear-gradient(180deg, #e6eef6 0%, #cfe0ef 100%); } /* hydro blue */
-.natlan-bg     { background: linear-gradient(180deg, #fbe6d4 0%, #f3cdae 100%); } /* pyro orange */
-.nodkrai-bg    { background: linear-gradient(180deg, #e4e0f0 0%, #d0cbe6 100%); } /* moonlit lavender */
-.snezhnaya-bg  { background: linear-gradient(180deg, #eef4f8 0%, #d6e4ee 100%); } /* icy white-blue */
-
-/* ---------- Section heading ---------- */
-.section-inner h3 {
-    font-size: 1.75em;
-    font-weight: 700;
-    color: #2d2a4a;
-    margin-top: 0;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #e8c96a;
-    margin-bottom: 18px;
-}
-
-/* ---------- Region description ---------- */
-.region-desc {
-    font-style: italic;
-    font-size: 1.02em;
-    color: #5a4f3a;
-    margin-bottom: 15px;
-    line-height: 1.55;
-}
-
-/* ---------- Dish list ---------- */
-.dish-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-    flex-grow: 1;               /* pushes Back to Top to the bottom */
-}
-
-.dish-list li {
-    font-size: 0.98em;
-    line-height: 1.55;
-    color: #4a3f2a;
-    padding: 8px 10px 8px 18px;
-    border-left: 3px solid #e8c96a;
-    margin-bottom: 8px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 0 4px 4px 0;
-}
-
-.dish-list li strong {
-    color: #2d2a4a;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.92em;
-    display: block;
-    margin-bottom: 2px;
-}
-
-/* ============================================================
-   BACK TO TOP BUTTON — fully functional
-   ============================================================ */
-.back-to-top {
-    display: block;
-    margin-top: auto;           /* pins to bottom of flex card */
-    padding: 12px 0;
-    background-color: #2d2a4a;
-    color: #e8c96a !important;
-    font-family: 'Cinzel', Georgia, serif;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration: none !important;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;            /* ensures clickable hand icon */
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
-}
-
-.back-to-top:hover,
-.back-to-top:focus {
-    background-color: #3d3a5a;
-    color: #fff3c4 !important;
-    text-decoration: none;
-    outline: none;
-    transform: translateY(-2px);
-}
-
-.back-to-top:active {
-    transform: translateY(0);
-}
-
-/* Highlight flash when a section is jumped to via nav menu */
-.menu-section:target .section-inner {
-    animation: sectionPulse 1.2s ease;
-}
-
-@keyframes sectionPulse {
-    0%   { box-shadow: 0 0 0 0 rgba(232, 201, 106, 0.9); }
-    70%  { box-shadow: 0 0 0 14px rgba(232, 201, 106, 0); }
-    100% { box-shadow: 0 4px 12px rgba(45, 42, 74, 0.15); }
-}
-
-/* ============================================================
-   RESPONSIVE TWEAKS
-   ============================================================ */
-
-/* Mobile (xs) */
-@media (max-width: 767px) {
-    #our-menu {
-        font-size: 2.2em;
-        margin: 25px 0 10px;
-    }
-
-    .menu-subtitle {
-        font-size: 1em;
-        margin-bottom: 25px;
-        padding: 0 10px;
-    }
-
-    .navbar-brand {
-        font-size: 1.25em !important;
-    }
-
-    .section-inner {
-        min-height: auto;       /* natural height on mobile */
-        padding: 20px 18px 15px;
-    }
-
-    .section-inner h3 {
-        font-size: 1.5em;
-    }
-
-    .dish-list li {
-        font-size: 0.95em;
-    }
-
-    .back-to-top {
-        padding: 12px 0;
-        font-size: 1em;
-    }
-}
-
-/* Tablet (sm) */
-@media (min-width: 768px) and (max-width: 991px) {
-    #our-menu {
-        font-size: 2.6em;
-    }
-
-    .section-inner {
-        min-height: 560px;
-    }
-
-    .section-inner h3 {
-        font-size: 1.6em;
-    }
-}
-
-/* Desktop (md and up) */
-@media (min-width: 992px) {
-    .section-inner {
-        min-height: 600px;
-    }
-}
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
