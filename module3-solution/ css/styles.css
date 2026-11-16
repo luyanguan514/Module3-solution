@@ -1,1 +1,31 @@
+/* Tall section — must be tall enough to force scrolling */
+.menu-section {
+  height: 1000px;
+  background-color: #2b3a4a;   /* Genshin-ish deep blue */
+  color: #f0e6d2;              /* warm parchment text */
+  padding: 20px;
+  margin-top: 15px;
+}
+
+/* Make the mobile dropdown span full width and stand out */
+#mobile-menu {
+  background-color: #1a2433;   /* darker than page */
+  margin: 0;
+  padding: 0;
+}
+
+#mobile-menu .navbar-nav {
+  margin: 0;
+}
+
+#mobile-menu .navbar-nav > li > a {
+  color: #f0e6d2;
+  text-align: center;
+}
+
+/* Optional: gold accent on the brand */
+.navbar-brand {
+  font-weight: bold;
+  color: #d4af37 !important;
+}
 
